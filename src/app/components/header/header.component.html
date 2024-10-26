@@ -1,1 +1,86 @@
-<p>header works!</p>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary " aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">José Murga</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menú</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Educación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experiencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skill">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="dropdown flags">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    id="dropdownLanguageButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/images/flags/es.png" alt="Idioma">
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownLanguageButton">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="assets/images/flags/es.png" alt="Español">
+                                            Español
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="assets/images/flags/us.png" alt="English">
+                                            Inglés
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="light-dark-mode">
+                                <input type="checkbox" id="chk" class="chk-light-dark-mode"
+                                    title="Toggle light/dark mode" />
+                                <label class="label-ldm" for="chk">
+                                    <i class="fa fa-moon" aria-hidden="true"></i>
+                                    <i class="fa fa-sun" aria-hidden="true"></i>
+                                    <div class="ball"></div>
+                                </label>
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
