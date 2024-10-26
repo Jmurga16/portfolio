@@ -1,1 +1,41 @@
-<p>about works!</p>
+<section #about id="about" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <!-- Columna de Resumen -->
+            <div class="col-md-6 mb-4">
+                <h2 class="mb-3">Acerca de Mí</h2>
+                <p>
+                    ¡Hola! Soy José Murga, un desarrollador web con pasión por crear aplicaciones web modernas y
+                    funcionales. Tengo experiencia en Frontend:
+                    <strong>Angular y JavaScript</strong>; así como en BackEnd:
+                    <strong>.NET, Node Js., PHP, Java </strong>
+                    ;también en diferentes Bases de Datos y la nube de Azure , enfocándome en la
+                    creación de Sistemas de Gestión, ERP, CRM, entre otros.
+                </p>
+                <p>
+                    Disfruto resolver problemas y aprender continuamente para mejorar mis habilidades. Estoy
+                    comprometido en
+                    ofrecer soluciones eficientes y centradas en el usuario. Puedo realizar desde diseño hasta
+                    despliegue de
+                    la aplicación según requerimiento, me adapto a la forma de trabajo sea en equipo o independiente.
+                </p>
+            </div>
+
+            <!-- Columna de Información Personal -->
+            <div class="col-md-6">
+                <h4 class="mb-4">Información Personal</h4>
+                <ul class="list-unstyled mt-3">
+                    @for (item of personalInfo; track $index) {
+                    <li>
+                        <img alt="⚡" draggable="false"
+                            src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/26a1.png"
+                            style="height: 1em; width: 1em; margin-right: 0.2em; vertical-align: -0.1em;">
+                        <strong>{{item.tag}}:</strong> {{item.description}}
+                    </li>
+                    }
+                </ul>
+                <a href="#contact" class="btn btn-primary mt-3">Contáctame</a>
+            </div>
+        </div>
+    </div>
+</section>
