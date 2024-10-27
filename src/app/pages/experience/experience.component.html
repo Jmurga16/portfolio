@@ -1,1 +1,16 @@
-<p>experience works!</p>
+<section #experience id="experience"  class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Experiencia</h2>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let exp of experienceList">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+              <h5 class="timeline-title">{{ exp.position }} - {{ exp.company }}</h5>
+              <p class="text-secondary">{{ exp.period }}</p>
+              <p>{{ exp.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</section>
