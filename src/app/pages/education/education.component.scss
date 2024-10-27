@@ -1,0 +1,42 @@
+#education {
+    h2 {
+        color      : #333;
+        font-weight: bold;
+    }
+
+    .card {
+        border-radius   : 8px;
+        border          : none;
+        padding         : 15px;
+        background-color: #f8f9fa;
+
+        .card-body {
+            padding-left: 1rem;
+        }
+
+        .card-title {
+            font-size  : 1.25rem;
+            font-weight: bold;
+            color      : #007bff;
+        }
+
+        .card-subtitle {
+            font-size: 1rem;
+            color    : #555;
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            color    : #666;
+        }
+
+        .text-secondary {
+            font-size: 0.85rem;
+        }
+
+        img {
+            max-height: 80px;
+            object-fit: contain;
+        }
+    }
+}

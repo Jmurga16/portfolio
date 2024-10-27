@@ -1,1 +1,29 @@
-<p>education works!</p>
+<section id="education" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Educación</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <!-- Tarjeta de Educación -->
+                <div class="card mb-4 shadow-sm" *ngFor="let edu of educationList">
+                    <div class="row no-gutters">
+                        <!-- Columna del Logo -->
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <img [src]="edu.logo" class="img-fluid" alt="{{ edu.institution }} logo"
+                                style="max-height: 80px;">
+                        </div>
+
+                        <!-- Columna de Información -->
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ edu.degree }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ edu.institution }}</h6>
+                                <p class="card-text">{{ edu.description }}</p>
+                                <p class="text-secondary">{{ edu.period }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
