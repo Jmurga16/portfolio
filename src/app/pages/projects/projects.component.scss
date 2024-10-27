@@ -16,9 +16,13 @@
         }
 
         img {
-            width     : 100%;
-            height    : 200px;
-            object-fit: cover;
+            width        : 100%;
+            height       : 200px;
+            object-fit   : cover;
+            border-radius: 8px;
+            border-style : solid;
+            border-width : thin;
+
         }
 
         .project-content {
@@ -35,7 +39,6 @@
             }
 
             a {
-                color          : #007bff;
                 margin         : 0 5px;
                 text-decoration: none;
 
@@ -43,6 +46,23 @@
                     text-decoration: underline;
                 }
             }
+        }
+    }
+
+    .btn-round {
+        border-radius: 30px;
+        border-width : 2px;
+    }
+
+    .btn-github {
+        color: white
+    }
+
+    .btn-demo {
+        color: #0d6efd;
+
+        &:hover {
+            color: white;
         }
     }
 }
