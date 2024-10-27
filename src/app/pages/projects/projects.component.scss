@@ -1,0 +1,48 @@
+#projects {
+    h2 {
+        color      : #333;
+        font-weight: bold;
+    }
+
+    .project-card {
+        border-radius: 8px;
+        overflow     : hidden;
+        position     : relative;
+        transition   : transform 0.3s;
+        cursor       : pointer;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width     : 100%;
+            height    : 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            background-color: #f8f9fa;
+            text-align      : center;
+
+            h5 {
+                font-size: 1.2rem;
+                color    : #007bff;
+            }
+
+            p {
+                color: #666;
+            }
+
+            a {
+                color          : #007bff;
+                margin         : 0 5px;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
