@@ -1,0 +1,21 @@
+#contact {
+    h2 {
+        color      : #333;
+        font-weight: bold;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        color      : #555;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        padding      : 0.75rem;
+    }
+
+    button {
+        border-radius: 5px;
+        padding      : 0.75rem;
+    }
+}
