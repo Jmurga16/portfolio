@@ -1,5 +1,7 @@
-import { Component, HostListener, Renderer2 } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { TranslateService } from '../../services/translate.service';
+import { isPlatformBrowser } from '@angular/common';
+import { WindowRef } from '../../services/window-ref.service';
 
 @Component({
   selector: 'app-header',
@@ -10,12 +12,22 @@ export class HeaderComponent {
 
   isNavbarTransparent = true;
   isDarkMode = false;
+  isMobile: boolean = false
+  currentLanguage: string = 'es';
+
 
   constructor(
     private renderer: Renderer2,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private windowRef: WindowRef,
   ) {
+    this.checkMobile();
+  }
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.checkMobile();
   }
 
   @HostListener('window:scroll', [])
@@ -24,11 +36,17 @@ export class HeaderComponent {
     this.isNavbarTransparent = offset < 500;
   }
 
-  currentLanguage: string = 'es';
+  checkMobile() {
+    if (isPlatformBrowser(this.platformId) && this.windowRef.nativeWindow) {
+      this.isMobile = (this.windowRef.nativeWindow.innerWidth <= 576);
+      if (this.isMobile) {
+        this.toggleDarkMode();
+      }
+    }
+  }
 
   async changeLanguage(language: string) {
     this.currentLanguage = language;
-
     await this.translateService.getData('assets/i18n/', language)
   }
 
@@ -42,12 +60,5 @@ export class HeaderComponent {
       this.renderer.removeClass(document.body, 'dark-mode');
     }
   }
-
-  //chk = document.getElementById('chk');
-
-  /* chk.addEventListener('change', () => {
-    document.body.classList.toggle('dark');
-  }); */
-
 
 }

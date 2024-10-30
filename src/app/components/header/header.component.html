@@ -2,9 +2,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
         [ngClass]="isNavbarTransparent ? 'navbar-transparent' : 'navbar-colored'" aria-label="Offcanvas navbar large">
         <div class="container-fluid">
-            <!-- @if(!isNavbarTransparent){
-            <a class="navbar-brand" href="#">José Murga</a>
-            } -->
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
                 aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
@@ -22,59 +19,58 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
 
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a class="nav-link active" aria-current="page" href="#home">
                                 {{'home' | translate}}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a class="nav-link" href="#about">
                                 {{'about' | translate}}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a class="nav-link" href="#education">
                                 {{'education' | translate}}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a class="nav-link" href="#experience">
                                 {{'experience' | translate}}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a class="nav-link" href="#skill">
                                 {{'skills' | translate}}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a class="nav-link" href="#projects">
                                 {{'projects' | translate}}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a class="nav-link" href="#contact">
                                 {{'contact' | translate}}
                             </a>
                         </li>
 
-                        <li class="">
+                        <li class="" data-bs-dismiss="offcanvas">
                             <div class="dropdown flags">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
                                     id="dropdownLanguageButton" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="assets/images/flags/{{ currentLanguage === 'es' ? 'es.png' : 'us.png' }}"
                                         alt="'language' | translate">
-                                    <!-- {{ currentLanguage }} -->
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownLanguageButton">
                                     <li>
-                                        <a class="dropdown-item" href="#" (click)="changeLanguage('es')">
+                                        <a class="dropdown-item" (click)="changeLanguage('es')">
                                             <img src="assets/images/flags/es.png" alt="Español">
                                             {{'spanish' | translate}}
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#" (click)="changeLanguage('en')">
+                                        <a class="dropdown-item" (click)="changeLanguage('en')">
                                             <img src="assets/images/flags/us.png" alt="English">
                                             {{'english' | translate}}
                                         </a>
@@ -83,7 +79,7 @@
                             </div>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
                             <div class="light-dark-mode">
                                 <input type="checkbox" id="chk" class="chk-light-dark-mode"
                                     title="Toggle light/dark mode" (click)="toggleDarkMode()" />

@@ -18,6 +18,10 @@
         transition      : background-color 0.3s ease;
     }
 
+    .offcanvas {
+        width: 14rem;
+    }
+
     /* Nav Items y Link */
     .nav-item {
         position: relative;
@@ -60,11 +64,22 @@
         line-height   : 1.625rem;
     }
 
-}
+    /* Dropdown Change Language Select */
+    .dropdown.flags {
+        margin: 0 0.5rem 0 0.5rem;
 
-/* Change Language Select */
-.dropdown.flags {
-    margin: 0 0.5rem 0 0.5rem
+        button {
+            border-color: #FFFFFF;
+            color       : #FFFFFF;
+        }
+
+        .dropdown-item:hover {
+            background-color: #0b5ed7;
+            color           : #FFFFFF;
+            cursor          : pointer;
+            transition      : background-color 0.2s ease;
+        }
+    }
 }
 
 /* Checkbox Light/Dark Mode */
