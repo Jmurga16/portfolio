@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Offcanvas navbar large">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">José Murga</a>
+            <!-- <a class="navbar-brand" href="#">José Murga</a> -->
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
                 aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
@@ -20,7 +20,9 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="#home">
+                                {{'inicio' | translate}}
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">Acerca de</a>
@@ -43,19 +45,21 @@
 
                         <li class="nav-item">
                             <div class="dropdown flags">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                <button class="btn btn-primary dropdown-toggle" type="button"
                                     id="dropdownLanguageButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/images/flags/es.png" alt="Idioma">
+                                    <img src="assets/images/flags/{{ currentLanguage === 'es' ? 'es.png' : 'us.png' }}"
+                                        alt="Idioma">
+                                    <!-- {{ currentLanguage }} -->
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownLanguageButton">
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="#" (click)="changeLanguage('es')">
                                             <img src="assets/images/flags/es.png" alt="Español">
                                             Español
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="#" (click)="changeLanguage('en')">
                                             <img src="assets/images/flags/us.png" alt="English">
                                             Inglés
                                         </a>
@@ -74,7 +78,6 @@
                                     <div class="ball"></div>
                                 </label>
                             </div>
-
                         </li>
 
                     </ul>
