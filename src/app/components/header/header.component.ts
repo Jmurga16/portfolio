@@ -9,6 +9,7 @@ import { TranslateService } from '../../services/translate.service';
 export class HeaderComponent {
 
   isNavbarTransparent = true;
+  isDarkMode = false;
 
   constructor(
     private renderer: Renderer2,
@@ -31,6 +32,16 @@ export class HeaderComponent {
     await this.translateService.getData('assets/i18n/', language)
   }
 
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    if (this.isDarkMode) {
+      this.renderer.addClass(document.body, 'dark-mode');
+      this.renderer.removeClass(document.body, 'light-mode');
+    } else {
+      this.renderer.addClass(document.body, 'light-mode');
+      this.renderer.removeClass(document.body, 'dark-mode');
+    }
+  }
 
   //chk = document.getElementById('chk');
 
