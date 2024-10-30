@@ -1,17 +1,68 @@
-/* body {
-    background-color: #fafafa;
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
-    height          : 100vh;
-    margin          : 0;
-    transition      : background 0.2s linear;
+#header {
+
+    /* Navbar Style */
+    .navbar {
+        padding-top   : 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .navbar-transparent {
+        background-color  : transparent !important;
+        -webkit-box-shadow: none;
+        box-shadow        : none;
+        color             : #FFFFFF;
+    }
+
+    .navbar-colored {
+        background-color: rgba(74, 144, 226, 0.8);
+        transition      : background-color 0.3s ease;
+    }
+
+    /* Nav Items y Link */
+    .nav-item {
+        position: relative;
+        display : inline-block;
+        margin  : 0 10px;
+    }
+
+    .nav-item a {
+        color          : #ffffff;
+        padding        : 8px 12px;
+        text-decoration: none;
+        transition     : color 0.3s ease;
+    }
+
+    .nav-item a::after {
+        content      : '';
+        position     : absolute;
+        top          : 0;
+        left         : 0;
+        right        : 0;
+        bottom       : 0;
+        border       : 2px solid transparent;
+        border-radius: 8px;
+        transition   : border-color 0.3s ease;
+    }
+
+    .nav-item:hover a::after {
+        border-color: #378c40;
+    }
+
+    .nav-item:hover a {
+        font-style: bold;
+        color     : #378c40;
+    }
+
+    .nav-link {
+        text-transform: uppercase;
+        font-size     : 1em;
+        padding       : 0.5rem 0.7rem;
+        line-height   : 1.625rem;
+    }
+
 }
 
-body.dark {
-    background: #292C35;
-} */
-
+/* Change Language Select */
 .dropdown.flags {
     margin: 0 0.5rem 0 0.5rem
 }
@@ -37,7 +88,7 @@ body.dark {
     position        : relative;
     height          : 26px;
     width           : 50px;
-    transform       : scale(1.5);
+    transform       : scale(1.2);
 }
 
 .label-ldm .ball {
@@ -68,6 +119,6 @@ body.dark {
 
 @media (min-width: 992px) {
     .light-dark-mode {
-        margin: 0.5em 1rem 0 2rem
+        margin: 0.5em 1rem 0 1rem
     }
 }

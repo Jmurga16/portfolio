@@ -1,7 +1,10 @@
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Offcanvas navbar large">
+<header id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+        [ngClass]="isNavbarTransparent ? 'navbar-transparent' : 'navbar-colored'" aria-label="Offcanvas navbar large">
         <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="#">José Murga</a> -->
+            <!-- @if(!isNavbarTransparent){
+            <a class="navbar-brand" href="#">José Murga</a>
+            } -->
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
                 aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
@@ -17,51 +20,63 @@
                 </div>
 
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#home">
-                                {{'inicio' | translate}}
+                                {{'home' | translate}}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">Acerca de</a>
+                            <a class="nav-link" href="#about">
+                                {{'about' | translate}}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#education">Educación</a>
+                            <a class="nav-link" href="#education">
+                                {{'education' | translate}}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experiencia</a>
+                            <a class="nav-link" href="#experience">
+                                {{'experience' | translate}}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#skill">Habilidades</a>
+                            <a class="nav-link" href="#skill">
+                                {{'skills' | translate}}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects">Proyectos</a>
+                            <a class="nav-link" href="#projects">
+                                {{'projects' | translate}}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contacto</a>
+                            <a class="nav-link" href="#contact">
+                                {{'contact' | translate}}
+                            </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="">
                             <div class="dropdown flags">
-                                <button class="btn btn-primary dropdown-toggle" type="button"
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
                                     id="dropdownLanguageButton" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="assets/images/flags/{{ currentLanguage === 'es' ? 'es.png' : 'us.png' }}"
-                                        alt="Idioma">
+                                        alt="'language' | translate">
                                     <!-- {{ currentLanguage }} -->
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownLanguageButton">
                                     <li>
                                         <a class="dropdown-item" href="#" (click)="changeLanguage('es')">
                                             <img src="assets/images/flags/es.png" alt="Español">
-                                            Español
+                                            {{'spanish' | translate}}
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#" (click)="changeLanguage('en')">
                                             <img src="assets/images/flags/us.png" alt="English">
-                                            Inglés
+                                            {{'english' | translate}}
                                         </a>
                                     </li>
                                 </ul>
