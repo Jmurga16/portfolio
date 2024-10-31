@@ -72,6 +72,13 @@ export class ProjectsComponent {
       demoLink: ''
     },
     {
+      name: 'Sistema Web de Agendamiento de Clientes Aquafiltek',
+      description: 'Sistema Web hecho en PHP nativo, Javascript y MySQL',
+      image: 'assets/images/projects/aquafiltek.png',
+      githubLink: '',
+      demoLink: ''
+    },
+    {
       name: 'Sistema web de administracion presupuestal',
       description: 'Sistema Web hecho en Vue, Java y SQL Server ',
       image: 'assets/images/projects/referencial.png',
@@ -81,13 +88,6 @@ export class ProjectsComponent {
     {
       name: 'Sistema de Gestión Administrativa de Posgrado',
       description: 'Sistema Web hecho en React, Java y Oracle',
-      image: 'assets/images/projects/referencial.png',
-      githubLink: '',
-      demoLink: ''
-    },
-    {
-      name: 'Sistema Web de Agendamiento de Clientes Aquafiltek',
-      description: 'Sistema Web hecho en PHP nativo, Javascript y MySQL',
       image: 'assets/images/projects/referencial.png',
       githubLink: '',
       demoLink: ''
