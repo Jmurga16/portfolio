@@ -1,22 +1,23 @@
 #about {
 
     h2 {
-        color      : #333;
         font-weight: bold;
     }
 
     p {
-        color      : #555;
         line-height: 1.6;
         text-align : justify;
     }
 
+    h4 {
+        font-size  : 1.5rem;
+        font-weight: bold;
+    }
+
     .list-unstyled {
         li {
-            //color        : #007bff;
-            font-size      : 1.1rem;
-            //font-weight  : bold;
-            margin-bottom  : 0.75rem;
+            font-size    : 1.1rem;
+            margin-bottom: 0.75rem;
 
             &:before {
                 //content    : "• ";
@@ -26,19 +27,48 @@
         }
     }
 
-    h4 {
-        font-size  : 1.5rem;
-        color      : #333;
-        font-weight: bold;
-    }
+    .list-work {
 
-    .btn-primary {
-        background-color: #007bff;
-        border-color    : #007bff;
+        padding-left: 1rem;
+        padding-top : 0.5rem;
 
-        &:hover {
-            background-color: #0056b3;
-            border-color    : #0056b3;
+        li {
+            list-style: none;
+
+            .icon-info {
+                background: #3586e8;
+                border    : 1px solid #3586e8;
+
+                i {
+                    position : absolute;
+                    top      : 50%;
+                    font-size: 20px;
+                    left     : 50%;
+                    transform: translate(-50%, -50%);
+                    overflow : visible;
+                }
+            }
+
+            .details-info {
+                padding-left: 50px;
+            }
+
+            .icon-info {
+                float        : left;
+                width        : 40px;
+                height       : 40px;
+                border-radius: 100%;
+                position     : relative;
+                margin-right : 15px;
+                transition   : .3s;
+                box-shadow   : 2px 2px 20px rgba(0, 0, 0, .1);
+                color        : #fff;
+            }
+        }
+
+        label {
+            font-weight  : bold;
+            margin-bottom: 0;
         }
     }
 }

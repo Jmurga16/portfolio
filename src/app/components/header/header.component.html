@@ -55,7 +55,7 @@
                             </a>
                         </li>
 
-                        <li class="" data-bs-dismiss="offcanvas">
+                        <li class="">
                             <div class="dropdown flags">
                                 <button class="btn btn-outline-secondary dropdown-toggle" type="button"
                                     id="dropdownLanguageButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,13 +63,13 @@
                                         alt="'language' | translate">
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownLanguageButton">
-                                    <li>
+                                    <li data-bs-dismiss="offcanvas">
                                         <a class="dropdown-item" (click)="changeLanguage('es')">
                                             <img src="assets/images/flags/es.png" alt="Español">
                                             {{'spanish' | translate}}
                                         </a>
                                     </li>
-                                    <li>
+                                    <li data-bs-dismiss="offcanvas">
                                         <a class="dropdown-item" (click)="changeLanguage('en')">
                                             <img src="assets/images/flags/us.png" alt="English">
                                             {{'english' | translate}}
