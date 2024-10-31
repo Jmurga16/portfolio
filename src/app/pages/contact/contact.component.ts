@@ -1,22 +1,39 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailService } from '../../services/email.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  contactData = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  };
+  contactForm: FormGroup;
 
-  onSubmit(form: any) {
-    if (form.valid) {
-      console.log('Mensaje enviado:', this.contactData);
-      form.reset();
+  constructor(private fb: FormBuilder, private emailService: EmailService) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+
+      const templateParams = {
+        from_name: this.contactForm.value.name,
+        from_email: this.contactForm.value.email,
+        message: this.contactForm.value.message
+      };
+
+      this.emailService.sendEmail(templateParams)
+        .then(() => {
+          this.contactForm.reset();
+        });
+    }
+    else {
+      alert("Complete el formulario correctamente.")
     }
   }
 }
