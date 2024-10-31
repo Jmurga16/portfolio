@@ -3,11 +3,11 @@
         <h2 class="text-center mb-5">Proyectos</h2>
         <div class="row">
             <div class="col-md-4 mb-4" *ngFor="let project of projectsList">
-                <div class="project-card shadow-sm">
+                <div class="card project-card shadow-sm">
                     <img [src]="project.image" alt="{{ project.name }}" class="img-fluid" />
                     <div class="project-content p-3">
-                        <h5>{{ project.name }}</h5>
-                        <p>{{ project.description }}</p>
+                        <h5 class="card-title">{{ project.name }}</h5>
+                        <p class="card-text">{{ project.description }}</p>
                         <div class="buttons">
                             <a class="btn btn-secondary btn-round btn-github" [href]="project.githubLink"
                                 [ngClass]="project.githubLink==''? 'disabled':''" target="_blank">
@@ -15,12 +15,11 @@
                                 GITHUB
                             </a>
                             <a class="btn btn-outline-primary btn-round btn-demo" [href]="project.demoLink"
-                                target="_blank">
+                                [ngClass]="project.demoLink==''? 'disabled':''" target="_blank">
                                 <i class="fa fa-eye"></i>
                                 DEMO
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
