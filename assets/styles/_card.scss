@@ -1,0 +1,34 @@
+.light-mode {
+    .card {
+        background-color: $light-bg-color;
+    }
+}
+
+.dark-mode {
+
+    .card {
+        background-color: $dark-card-bg-color;
+        color           : $dark-text-primary !important;
+       
+
+        .card-title {
+            color: $dark-text-color !important;
+        }
+
+        .card-subtitle {
+            color: $dark-text-color !important;
+        }
+
+        .card-text {
+            color: $dark-text-primary !important;
+        }
+
+        .text-secondary {
+            color: $dark-text-secondary !important;
+        }
+
+        a {
+            color: $dark-link-color !important;
+        }
+    }
+}
