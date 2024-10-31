@@ -40,8 +40,12 @@ export class HeaderComponent {
     if (isPlatformBrowser(this.platformId) && this.windowRef.nativeWindow) {
       this.isMobile = (this.windowRef.nativeWindow.innerWidth <= 576);
       if (this.isMobile) {
-        this.toggleDarkMode();
+        this.toggleDarkMode(true);
       }
+      else if (!this.isMobile && this.isDarkMode) {
+        this.toggleDarkMode(false);
+      }
+
     }
   }
 
@@ -50,12 +54,15 @@ export class HeaderComponent {
     await this.translateService.getData('assets/i18n/', language)
   }
 
-  toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode;
+  toggleDarkMode(isDarkMode?: boolean) {
+
+    this.isDarkMode = isDarkMode ? isDarkMode : !this.isDarkMode;
+
     if (this.isDarkMode) {
       this.renderer.addClass(document.body, 'dark-mode');
       this.renderer.removeClass(document.body, 'light-mode');
-    } else {
+    }
+    else {
       this.renderer.addClass(document.body, 'light-mode');
       this.renderer.removeClass(document.body, 'dark-mode');
     }

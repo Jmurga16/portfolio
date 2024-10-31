@@ -4,13 +4,18 @@ $light-bg-color      : #F4F5F7;
 $text-color          : #333333;
 $secondary-text-color: #828282;
 
-$dark-card-bg-color :#1C2A3B;
+$light-bg-primary :#2C3E50;
+
+
+$dark-card-bg-color : #1C2A3B;
 $dark-bg-color      : #2D3E50;
+$dark-bg-primary    : #1F2833;
 $dark-text-color    : #FFFFFF;
 $dark-text-primary  : #E0E0E0;
 $dark-text-secondary: #A0A0A0;
 $dark-text-disabled : #666666;
 $dark-link-color    : #66B2FF;
+
 
 
 // Sobrescribe el color primario de Bootstrap
@@ -23,6 +28,15 @@ $theme-colors: ("primary": $primary-color,
     background-color: $light-bg-color;
     color           : $text-color;
 
+    .bg-primary {
+        background-color: $light-bg-primary !important;
+    }
+
+    .btn-primary {
+        background-color: $light-bg-primary;
+        border-color    : $light-bg-primary;
+    }
+
     .card {
         background-color: $light-bg-color;
     }
@@ -34,7 +48,10 @@ $theme-colors: ("primary": $primary-color,
     background-color: $dark-bg-color;
     color           : $dark-text-color;
 
-    // Ejemplo de cómo adaptar el color primario en el modo oscuro
+    .bg-primary {
+        background-color: $dark-bg-primary !important;
+    }
+
     .btn-primary {
         background-color: $dark-bg-color;
         border-color    : $dark-bg-color;

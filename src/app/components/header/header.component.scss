@@ -14,7 +14,7 @@
     }
 
     .navbar-colored {
-        background-color: rgba(74, 144, 226, 0.8);
+        background-color: #2C3E50;
         transition      : background-color 0.3s ease;
     }
 
@@ -49,12 +49,12 @@
     }
 
     .nav-item:hover a::after {
-        border-color: #378c40;
+        border-color: #ECF0F1;
     }
 
     .nav-item:hover a {
         font-style: bold;
-        color     : #378c40;
+        color     : #ECF0F1;
     }
 
     .nav-link {
