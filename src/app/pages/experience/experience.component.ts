@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IExperienceList } from '../../models/interfaces/experience-list';
 
 @Component({
   selector: 'app-experience',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
-  experienceList = [
+
+  displayedYears: Set<string> = new Set();
+  experienceWithYears: IExperienceList[] = [];
+
+  experienceList: IExperienceList[] = [
     {
       position: 'Desarrollador Senior',
       company: 'Ayesa',
@@ -55,6 +60,26 @@ export class ExperienceComponent {
       period: 'Agosto 2019 - Septiembre 2020',
       description: 'Desarrollo full-stack (C#, SQL Server, Html-Css y Angular) en .NET, de los sistemas de información de la web de la empresa.'
     }
-
   ];
+
+  ngOnInit(): void {
+    this.processExperienceList();
+  }
+
+  processExperienceList(): void {
+    this.experienceWithYears = this.experienceList.map((exp, index) => {
+      const year = this.getYear(exp.period);
+      const shouldDisplay = !this.displayedYears.has(year);
+      if (shouldDisplay) {
+        this.displayedYears.add(year);
+      }
+      return { ...exp, shouldDisplayYear: shouldDisplay, year };
+    });
+  }
+
+  getYear(period: string): string {
+    const yearMatch = period.match(/\d{4}/);
+    return yearMatch ? yearMatch[0] : '';
+  }
+
 }

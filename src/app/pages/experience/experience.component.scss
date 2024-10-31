@@ -2,7 +2,7 @@
 
     .timeline {
         position  : relative;
-        padding   : 2rem 0;
+        padding   : 3rem 0;
         margin    : 0;
         list-style: none;
 
@@ -15,21 +15,19 @@
             width     : 3px;
             background: linear-gradient(to bottom, #007bff, #00c6ff);
             transform : translateX(-50%);
-            z-index   : 1;
+            z-index   : 0;
         }
 
         .timeline-item {
-            position  : relative;
-            margin-top: -4rem;
-            width     : 50%;
-            padding   : 1rem 2rem;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-            opacity   : 0;
-            transform : translateY(30px);
-            animation : fadeInUp 0.6s ease forwards;
-
-            // Agregar un retraso para cada elemento
+            position       : relative;
+            margin-top     : -4rem;
+            width          : 50%;
+            padding        : 1rem 2rem;
+            box-sizing     : border-box;
+            transition     : all 0.3s ease;
+            opacity        : 0;
+            transform      : translateY(30px);
+            animation      : fadeInUp 0.6s ease forwards;
             animation-delay: calc(0.2s * var(--item-index));
 
             &:nth-child(odd) {
@@ -56,12 +54,11 @@
             }
 
             .timeline-content {
-                position     : relative;
-                background   : #ffffff;
-                padding      : 1.5rem;
-                border-radius: 10px;
-                box-shadow   : 0 4px 15px rgba(0, 0, 0, 0.1);
-                z-index      : 2;
+                position       : relative;
+                padding        : 1.5rem;
+                border-radius  : 10px;
+                box-shadow     : 0 4px 15px rgba(0, 0, 0, 0.1);
+                z-index        : 2;
 
                 .timeline-title {
                     font-size  : 1.2rem;
@@ -76,7 +73,34 @@
                     margin-bottom: 0.5rem;
                 }
             }
+
         }
+
+        .timeline-year {
+            position        : absolute;
+            top             : 1rem;
+            width           : 40px;
+            height          : 40px;
+            background-color: #007bff;
+            color           : white;
+            border-radius   : 50%;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            transform       : translateX(-50%);
+            z-index         : 99;
+        }
+
+        .timeline-year.left {
+            left: 100%;
+            top : 1rem;
+        }
+
+        .timeline-year.right {
+            left: 0;
+            top : 1rem;
+        }
+
     }
 
     @keyframes fadeInUp {
@@ -94,22 +118,29 @@
     // Media query para pantallas pequeñas
     @media (max-width: 768px) {
         .timeline {
+            padding: 0;
+
             &:before {
-                display: none; // Oculta la línea central
+                display: none;
             }
 
             .timeline-item {
-                width     : 100%; // Hace que cada item ocupe el 100% de ancho
-                margin-top: 1rem; // Espacio entre items
+                width     : 100%;
+                margin-top: 1rem;
 
                 &:nth-child(odd) {
-                    left: 0;
-
+                    left      : 0;
+                    text-align: left;
                 }
 
                 &:nth-child(even) {
-                    left: 0
+                    left      : 0;
+                    text-align: left;
                 }
+            }
+
+            .timeline-year {
+                display: none;
             }
         }
     }
