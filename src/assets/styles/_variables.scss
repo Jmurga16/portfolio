@@ -1,11 +1,17 @@
-
 $primary-color       : #4A90E2; // Color primario
 $secondary-color     : #50E3C2;
-$dark-bg-color       : #2D3E50;
 $light-bg-color      : #F4F5F7;
 $text-color          : #333333;
 $secondary-text-color: #828282;
-$dark-text-color     : #FFFFFF;
+
+$dark-card-bg-color :#1C2A3B;
+$dark-bg-color      : #2D3E50;
+$dark-text-color    : #FFFFFF;
+$dark-text-primary  : #E0E0E0;
+$dark-text-secondary: #A0A0A0;
+$dark-text-disabled : #666666;
+$dark-link-color    : #66B2FF;
+
 
 // Sobrescribe el color primario de Bootstrap
 $theme-colors: ("primary": $primary-color,
@@ -16,6 +22,11 @@ $theme-colors: ("primary": $primary-color,
 .light-mode {
     background-color: $light-bg-color;
     color           : $text-color;
+
+    .card {
+        background-color: $light-bg-color;
+    }
+
 }
 
 // Modo oscuro
