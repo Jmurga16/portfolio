@@ -22,12 +22,12 @@ export class HeaderComponent {
     @Inject(PLATFORM_ID) private platformId: Object,
     private windowRef: WindowRef,
   ) {
-    this.checkMobile();
+    this.checkMobile(true);
   }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.checkMobile();
+    this.checkMobile(false);
   }
 
   @HostListener('window:scroll', [])
@@ -36,16 +36,12 @@ export class HeaderComponent {
     this.isNavbarTransparent = offset < 500;
   }
 
-  checkMobile() {
+  checkMobile(init?: boolean) {
     if (isPlatformBrowser(this.platformId) && this.windowRef.nativeWindow) {
       this.isMobile = (this.windowRef.nativeWindow.innerWidth <= 576);
-      if (this.isMobile) {
+      if (this.isMobile && init) {
         this.toggleDarkMode(true);
       }
-      else if (!this.isMobile && this.isDarkMode) {
-        this.toggleDarkMode(false);
-      }
-
     }
   }
 
