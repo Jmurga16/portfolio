@@ -9,88 +9,89 @@ import { IProjectList } from '../../models/interfaces/project-list';
 export class ProjectsComponent {
   projectsList: IProjectList[] = [
     {
-      name: 'CRM Legal',
-      description: 'Sistema Web para un Estudio Jurídico hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/crmlegal-small.png',
-      githubLink: '',
-      demoLink: 'https://crm-legal.azurewebsites.net/'
+      "name": "projects.name.1",
+      "description": "projects.description.1",
+      "image": "assets/images/projects/crmlegal-small.png",
+      "githubLink": "",
+      "demoLink": "https://crm-legal.azurewebsites.net/"
     },
     {
-      name: 'Sistema Web para Gestión de Almacen',
-      description: 'Sistema Web para un almacen de Productos Orgánicos hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/crmlegal-small.png',
-      githubLink: '',
-      demoLink: ''
+      "name": "projects.name.2",
+      "description": "projects.description.2",
+      "image": "assets/images/projects/crmlegal-small.png",
+      "githubLink": "",
+      "demoLink": ""
     },
     {
-      name: 'Lucky ERP',
-      description: 'Sistema Web para una empresa de Marketing hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/lucky.png',
-      githubLink: '',
-      demoLink: 'https://www.grupolucky.com/',
+      "name": "projects.name.3",
+      "description": "projects.description.3",
+      "image": "assets/images/projects/lucky.png",
+      "githubLink": "",
+      "demoLink": "https://www.grupolucky.com/"
     },
     {
-      name: 'Inventario',
-      description: 'Sistema Web de Inventario hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/inventario-small.png',
-      githubLink: 'https://github.com/Jmurga16/Inventario.Front',
-      demoLink: '',
+      "name": "projects.name.4",
+      "description": "projects.description.4",
+      "image": "assets/images/projects/inventario-small.png",
+      "githubLink": "https://github.com/Jmurga16/Inventario.Front",
+      "demoLink": ""
     },
     {
-      name: 'Libros y Asignaturas',
-      description: 'CRUD hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/libros-asignaturas-small.png',
-      githubLink: 'https://github.com/Jmurga16/Libros-Asignaturas',
-      demoLink: '',
+      "name": "projects.name.5",
+      "description": "projects.description.5",
+      "image": "assets/images/projects/libros-asignaturas-small.png",
+      "githubLink": "https://github.com/Jmurga16/Libros-Asignaturas",
+      "demoLink": ""
     },
     {
-      name: 'Gestor de Alumnos y Notas',
-      description: 'Sistema hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/alumnos-notas-small.png',
-      githubLink: 'https://github.com/Jmurga16/GestorAlumnos.Front',
-      demoLink: '',
+      "name": "projects.name.6",
+      "description": "projects.description.6",
+      "image": "assets/images/projects/alumnos-notas-small.png",
+      "githubLink": "https://github.com/Jmurga16/GestorAlumnos.Front",
+      "demoLink": ""
     },
     {
-      name: 'Mas Uno',
-      description: 'Landing Page hecho en Angular',
-      image: 'assets/images/projects/masuno-small.png',
-      githubLink: '',
-      demoLink: ''
+      "name": "projects.name.7",
+      "description": "projects.description.7",
+      "image": "assets/images/projects/masuno-small.png",
+      "githubLink": "",
+      "demoLink": ""
     },
     {
-      name: 'Generador de Códigos de Descuentos',
-      description: 'Sistema Generador de códigos hecho en Angular',
-      image: 'assets/images/projects/gestor-codigos-small.png',
-      githubLink: 'https://github.com/Jmurga16/GeneradorCodigos.Front',
-      demoLink: ''
+      "name": "projects.name.8",
+      "description": "projects.description.8",
+      "image": "assets/images/projects/gestor-codigos-small.png",
+      "githubLink": "https://github.com/Jmurga16/GeneradorCodigos.Front",
+      "demoLink": ""
     },
     {
-      name: 'Para Financiera',
-      description: 'Sistema Web hecho en Angular.',
-      image: 'assets/images/projects/referencial.png',
-      githubLink: 'https://github.com/Jmurga16',
-      demoLink: ''
+      "name": "projects.name.9",
+      "description": "projects.description.9",
+      "image": "assets/images/projects/referencial.png",
+      "githubLink": "https://github.com/Jmurga16",
+      "demoLink": ""
     },
     {
-      name: 'Sistema Web de Agendamiento de Clientes Aquafiltek',
-      description: 'Sistema Web hecho en PHP nativo, Javascript y MySQL',
-      image: 'assets/images/projects/aquafiltek-small.png',
-      githubLink: '',
-      demoLink: ''
+      "name": "projects.name.10",
+      "description": "projects.description.10",
+      "image": "assets/images/projects/aquafiltek-small.png",
+      "githubLink": "",
+      "demoLink": ""
     },
     {
-      name: 'Sistema web de administracion presupuestal',
-      description: 'Sistema Web hecho en Vue, Java y SQL Server ',
-      image: 'assets/images/projects/referencial.png',
-      githubLink: 'https://github.com/Jmurga16',
-      demoLink: ''
+      "name": "projects.name.11",
+      "description": "projects.description.11",
+      "image": "assets/images/projects/referencial.png",
+      "githubLink": "https://github.com/Jmurga16",
+      "demoLink": ""
     },
     {
-      name: 'Sistema de Gestión Administrativa de Posgrado',
-      description: 'Sistema Web hecho en React, Java y Oracle',
-      image: 'assets/images/projects/referencial.png',
-      githubLink: '',
-      demoLink: ''
+      "name": "projects.name.12",
+      "description": "projects.description.12",
+      "image": "assets/images/projects/referencial.png",
+      "githubLink": "",
+      "demoLink": ""
     }
-  ];
+  ]
+  
 }

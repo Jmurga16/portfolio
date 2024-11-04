@@ -6,8 +6,8 @@
                 <div class="card project-card shadow-sm">
                     <img [src]="project.image" alt="{{ project.name }}" class="img-fluid" />
                     <div class="project-content p-3">
-                        <h5 class="card-title">{{ project.name }}</h5>
-                        <p class="card-text">{{ project.description }}</p>
+                        <h5 class="card-title">{{ project.name | translate }}</h5>
+                        <p class="card-text">{{ project.description | translate }}</p>
                         <div class="buttons">
                             <a class="btn btn-secondary btn-round btn-github" [href]="project.githubLink"
                                 [ngClass]="project.githubLink==''? 'disabled':''" target="_blank">
