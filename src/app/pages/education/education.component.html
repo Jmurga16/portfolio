@@ -3,19 +3,19 @@
         <h2 class="text-center mb-5">{{'education.title'|translate}}</h2>
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="card education-card mb-4 shadow-sm" *ngFor="let edu of educationList">
+                <div class="card education-card mb-4 shadow-sm">
                     <div class="row no-gutters align-items-center">
                         <div class="col-md-3 d-flex align-items-center justify-content-center">
                             <div class="logo-container">
-                                <img [src]="edu.logo" alt="{{ edu.institution }} logo" class="img-fluid logo-img">
+                                <img [src]="logoUrl" alt="{{ 'education.institution' | translate }} logo" class="img-fluid logo-img">
                             </div>
                         </div>
                         <div class="col-md-9">
                             <div class="card-body">
-                                <h5 class="card-title">{{ edu.degree }}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">{{ edu.institution }}</h6>
-                                <p class="card-text">{{ edu.description }}</p>
-                                <p class="text-secondary">{{ edu.period }}</p>
+                                <h5 class="card-title">{{ 'education.degree' | translate }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ 'education.institution' | translate }}</h6>
+                                <p class="card-text">{{ 'education.faculty' | translate }}</p>
+                                <p class="text-secondary">{{ 'education.years'|translate }}</p>
                             </div>
                         </div>
                     </div>

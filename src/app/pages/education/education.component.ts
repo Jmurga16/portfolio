@@ -4,7 +4,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss',
-  //encapsulation: ViewEncapsulation.None // Desactiva el encapsulado de estilo
+  //encapsulation: ViewEncapsulation.None 
 })
 export class EducationComponent {
   educationList = [
@@ -16,4 +16,7 @@ export class EducationComponent {
       logo: "assets/images/unmsm.png"
     }
   ];
+
+  logoUrl = "assets/images/unmsm.png"
+
 }
