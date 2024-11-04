@@ -9,9 +9,9 @@
           {{ exp.year }}
         </div>
         <div class="timeline-content card">
-          <h5 class="timeline-title card-title">{{ exp.position }} - {{ exp.company }}</h5>
-          <p class="text-secondary">{{ exp.period }}</p>
-          <p class="card-text">{{ exp.description }}</p>
+          <h5 class="timeline-title card-title">{{ exp.position | translate }} - {{ exp.company }}</h5>
+          <p class="text-secondary">{{ exp.period |translate }}</p>
+          <p class="card-text">{{ exp.description |translate }}</p>
         </div>
       </div>
     </div>
