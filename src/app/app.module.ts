@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -28,7 +27,6 @@ export function translateFactory(provider: TranslateService) {
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavBarComponent,
     HomeComponent,
     AboutComponent,
     ContactComponent,
