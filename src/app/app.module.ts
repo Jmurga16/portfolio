@@ -19,7 +19,7 @@ import { TranslateService } from './services/translate.service';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
 export function translateFactory(provider: TranslateService) {
-  return () => provider.getData('/assets/i18n/')
+  return () => provider.getData('assets/i18n/')
 }
 
 @NgModule({
