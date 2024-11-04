@@ -10,6 +10,7 @@ export class TranslateService {
 
   private data: any;
   private isBrowser: boolean;
+  
   constructor(
     private httpClient: HttpClient,
     @Inject(PLATFORM_ID) private platformId: Object
@@ -17,6 +18,7 @@ export class TranslateService {
     // Verifica si el entorno es el navegador
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
+
   getData(path: string, language?: string) {
     return new Promise((resolve, reject) => {
       if (!language) {
@@ -28,7 +30,8 @@ export class TranslateService {
           resolve(true);
         },
         error: (error) => {
-          console.error(error)
+          //console.error(error)
+          console.clear();
           this.httpClient.get(path + "es.json").subscribe({
             next: (data) => {
               this.data = data
