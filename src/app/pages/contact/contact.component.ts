@@ -33,7 +33,7 @@ export class ContactComponent {
         });
     }
     else {
-      alert("Complete el formulario correctamente.")
+      alert("Complete el formulario correctamente. Complete the form correctly.")
     }
   }
 }
