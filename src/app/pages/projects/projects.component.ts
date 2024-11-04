@@ -11,14 +11,14 @@ export class ProjectsComponent {
     {
       name: 'CRM Legal',
       description: 'Sistema Web para un Estudio Jurídico hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/crmlegal.png',
+      image: 'assets/images/projects/crmlegal-small.png',
       githubLink: '',
       demoLink: 'https://crm-legal.azurewebsites.net/'
     },
     {
       name: 'Sistema Web para Gestión de Almacen',
       description: 'Sistema Web para un almacen de Productos Orgánicos hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/crmlegal.png',
+      image: 'assets/images/projects/crmlegal-small.png',
       githubLink: '',
       demoLink: ''
     },
@@ -32,35 +32,35 @@ export class ProjectsComponent {
     {
       name: 'Inventario',
       description: 'Sistema Web de Inventario hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/inventario.png',
+      image: 'assets/images/projects/inventario-small.png',
       githubLink: 'https://github.com/Jmurga16/Inventario.Front',
       demoLink: '',
     },
     {
       name: 'Libros y Asignaturas',
       description: 'CRUD hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/libros-asignaturas.png',
+      image: 'assets/images/projects/libros-asignaturas-small.png',
       githubLink: 'https://github.com/Jmurga16/Libros-Asignaturas',
       demoLink: '',
     },
     {
       name: 'Gestor de Alumnos y Notas',
       description: 'Sistema hecho en Angular, .NET y SQL Server',
-      image: 'assets/images/projects/alumnos-notas.png',
+      image: 'assets/images/projects/alumnos-notas-small.png',
       githubLink: 'https://github.com/Jmurga16/GestorAlumnos.Front',
       demoLink: '',
     },
     {
       name: 'Mas Uno',
       description: 'Landing Page hecho en Angular',
-      image: 'assets/images/projects/masuno.png',
+      image: 'assets/images/projects/masuno-small.png',
       githubLink: '',
       demoLink: ''
     },
     {
       name: 'Generador de Códigos de Descuentos',
       description: 'Sistema Generador de códigos hecho en Angular',
-      image: 'assets/images/projects/gestor-codigos.png',
+      image: 'assets/images/projects/gestor-codigos-small.png',
       githubLink: 'https://github.com/Jmurga16/GeneradorCodigos.Front',
       demoLink: ''
     },
@@ -74,7 +74,7 @@ export class ProjectsComponent {
     {
       name: 'Sistema Web de Agendamiento de Clientes Aquafiltek',
       description: 'Sistema Web hecho en PHP nativo, Javascript y MySQL',
-      image: 'assets/images/projects/aquafiltek.png',
+      image: 'assets/images/projects/aquafiltek-small.png',
       githubLink: '',
       demoLink: ''
     },
