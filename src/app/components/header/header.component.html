@@ -82,7 +82,7 @@
                         <li class="nav-item" data-bs-dismiss="offcanvas">
                             <div class="light-dark-mode">
                                 <input type="checkbox" id="chk" class="chk-light-dark-mode"
-                                    title="Toggle light/dark mode" (click)="toggleDarkMode()" />
+                                    title="Toggle light/dark mode" [checked]="isDarkMode" (change)="toggleDarkMode()" />
                                 <label class="label-ldm" for="chk">
                                     <i class="fa fa-moon" aria-hidden="true"></i>
                                     <i class="fa fa-sun" aria-hidden="true"></i>

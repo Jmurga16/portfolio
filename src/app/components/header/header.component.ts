@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { TranslateService } from '../../services/translate.service';
 import { isPlatformBrowser } from '@angular/common';
 import { WindowRef } from '../../services/window-ref.service';
@@ -8,7 +8,7 @@ import { WindowRef } from '../../services/window-ref.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   isNavbarTransparent = true;
   isDarkMode = false;
@@ -23,6 +23,15 @@ export class HeaderComponent {
     private windowRef: WindowRef,
   ) {
     this.checkMobile(true);
+  }
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const darkModeStored = localStorage.getItem('dark-mode');
+      if (darkModeStored === 'true') {
+        this.toggleDarkMode(true);
+      }
+    }
   }
 
   @HostListener('window:resize', ['$event'])
@@ -50,6 +59,20 @@ export class HeaderComponent {
     await this.translateService.getData('assets/i18n/', language)
   }
 
+  /* toggleDarkMode(isDarkMode?: boolean) {
+
+    this.isDarkMode = isDarkMode ? isDarkMode : !this.isDarkMode;
+
+    if (this.isDarkMode) {
+      document.documentElement.classList.add('dark-mode');
+    } else {
+      document.documentElement.classList.remove('dark-mode');
+    }
+
+    localStorage.setItem('dark-mode', this.isDarkMode ? 'true' : 'false');
+  } */
+
+
   toggleDarkMode(isDarkMode?: boolean) {
 
     this.isDarkMode = isDarkMode ? isDarkMode : !this.isDarkMode;
@@ -62,6 +85,8 @@ export class HeaderComponent {
       this.renderer.addClass(document.body, 'light-mode');
       this.renderer.removeClass(document.body, 'dark-mode');
     }
+
+    localStorage.setItem('dark-mode', this.isDarkMode ? 'true' : 'false');
   }
 
 }
