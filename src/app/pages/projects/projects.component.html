@@ -10,12 +10,12 @@
                         <p class="card-text">{{ project.description | translate }}</p>
                         <div class="buttons">
                             <a class="btn btn-secondary btn-round btn-github" [href]="project.githubLink"
-                                [ngClass]="project.githubLink==''? 'disabled':''" target="_blank">
+                                [ngClass]="project.githubLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-github"></i>
                                 GITHUB
                             </a>
                             <a class="btn btn-outline-primary btn-round btn-demo" [href]="project.demoLink"
-                                [ngClass]="project.demoLink==''? 'disabled':''" target="_blank">
+                                [ngClass]="project.demoLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">
                                 <i class="fa fa-eye"></i>
                                 DEMO
                             </a>
