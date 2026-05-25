@@ -6,19 +6,17 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
-  title = 'José Murga'
-  subTitle = 'FullStack Software Developer';
+  title = 'Jose Murga';
+  subTitle = 'Senior Full Stack Developer';
   displayedText = '';
   index = 0;
-  typingSpeed = 100;
+  typingSpeed = 85;
 
   ngOnInit(): void {
     this.startTyping();
   }
 
-  //Effect Typing
-  startTyping() {
+  startTyping(): void {
     if (this.index < this.subTitle.length) {
       this.displayedText += this.subTitle.charAt(this.index);
       this.index++;

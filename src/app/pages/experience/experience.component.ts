@@ -64,10 +64,17 @@ export class ExperienceComponent {
   */
   experienceList: IExperienceList[] = [
     {
+      position: 'experience.position.9',
+      company: 'Card Software (USA)',
+      period: 'experience.period.9',
+      periodYear: 'Diciembre 2025 - Mayo 2026',
+      description: 'experience.description.9'
+    },
+    {
       position: 'experience.position.1',
       company: 'Ayesa',
       period: 'experience.period.1',
-      periodYear: 'Mayo 2024 - Presente',
+      periodYear: 'Mayo 2024 - Noviembre 2025',
       description: 'experience.description.1'
     },
     {
@@ -137,8 +144,8 @@ export class ExperienceComponent {
   }
 
   getYear(period: string): string {
-    const yearMatch = period.match(/\d{4}/);
-    return yearMatch ? yearMatch[0] : '';
+    const yearMatches = period.match(/\d{4}/g);
+    return yearMatches?.length ? yearMatches[yearMatches.length - 1] : '';
   }
 
 }

@@ -7,21 +7,15 @@
                 </div>
                 <div class="container">
                     <div class="content-center">
-                        <div class="h1 title">{{title}}</div>
-                        <div class="cc-profile-image">
-                            <a href="#">
-                                <img src="assets/images/profile.jpg" alt="Image" />
-                            </a>
-                        </div>
-                        <p id="animated-text" class="h4 text-white">
-                            {{displayedText}}
-                        </p>
+                        <h1 class="title">{{title}}</h1>
+                        <p id="animated-text" class="hero-tagline">{{displayedText || ('home.hero.title'|translate)}}</p>
+                        <p class="hero-summary">{{'home.hero.subtitle'|translate}}</p>
                         <div class="contact-container">
                             <a class="btn btn-primary  smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
                                 data-aos-anchor="data-aos-anchor">
                                 {{'home.contact'|translate}}
                             </a>
-                            <a class="btn btn-secondary" href="assets/docs/CV_Jose Murga.pdf" download="CV_Jose_Murga"
+                            <a class="btn btn-secondary" href="assets/docs/CV_JoseMurga.pdf" download="CV_Jose_Murga"
                                 data-aos="zoom-in" data-aos-anchor="data-aos-anchor">
                                 {{'home.download'|translate}}
                             </a>

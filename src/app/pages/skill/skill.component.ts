@@ -11,6 +11,7 @@ export class SkillComponent {
   skillsList: ISkillList = {
     frontend: [
       { name: 'Angular', logo: 'assets/images/skills/angular.svg' },
+      { name: 'Astro', logo: 'assets/images/skills/astro.svg' },
       { name: 'React', logo: 'assets/images/skills/react_dark.svg' },
       { name: 'TypeScript', logo: 'assets/images/skills/typescript.svg' },
       { name: 'HTML', logo: 'assets/images/skills/html5.svg' },
