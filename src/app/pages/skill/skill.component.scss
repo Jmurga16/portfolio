@@ -23,3 +23,11 @@
     }
 
 }
+
+:host-context(.light-mode) #skill img[alt='GitHub'] {
+    filter: brightness(0) saturate(100%);
+}
+
+:host-context(.dark-mode) #skill img[alt='GitHub'] {
+    filter: none;
+}
