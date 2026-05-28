@@ -10,6 +10,9 @@
                     <div class="project-content p-3">
                         <h5 class="card-title">{{ project.name | translate }}</h5>
                         <p class="card-text">{{ project.description | translate }}</p>
+                        <div class="tags" *ngIf="project.tags?.length">
+                            <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+                        </div>
                         <div class="buttons">
                             <a class="btn btn-primary btn-round btn-visit" [href]="project.demoLink"
                                 [ngClass]="project.demoLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">
@@ -30,6 +33,9 @@
                     <div class="project-content p-3">
                         <h5 class="card-title">{{ project.name | translate }}</h5>
                         <p class="card-text">{{ project.description | translate }}</p>
+                        <div class="tags" *ngIf="project.tags?.length">
+                            <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+                        </div>
                         <div class="buttons">
                             <a class="btn btn-secondary btn-round btn-github" [href]="project.githubLink"
                                 [ngClass]="project.githubLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">

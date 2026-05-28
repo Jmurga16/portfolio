@@ -15,6 +15,7 @@ export class ProjectsComponent {
       "name": "projects.name.16",
       "description": "projects.description.16",
       "image": "assets/images/projects/erp-logistics.png",
+      "tags": ["Angular", "Java", "MySQL"],
       "githubLink": "",
       "demoLink": "https://erp-logistics-front-dev.azurewebsites.net/"
     },
@@ -22,6 +23,7 @@ export class ProjectsComponent {
       "name": "projects.name.13",
       "description": "projects.description.13",
       "image": "assets/images/projects/gestion-expedientes.png",
+      "tags": ["Angular", "Java", "MongoDB"],
       "githubLink": "",
       "demoLink": "https://gestor-expedientesv1.azurewebsites.net/"
     },
@@ -29,6 +31,7 @@ export class ProjectsComponent {
       "name": "projects.name.15",
       "description": "projects.description.15",
       "image": "assets/images/projects/densys.png",
+      "tags": ["React", "Java", "PostgreSQL"],
       "githubLink": "",
       "demoLink": ""
     },
@@ -36,6 +39,7 @@ export class ProjectsComponent {
       "name": "projects.name.1",
       "description": "projects.description.1",
       "image": "assets/images/projects/crmlegal-small.png",
+      "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",
       "demoLink": "https://crm-legal.azurewebsites.net/"
     },
@@ -43,6 +47,7 @@ export class ProjectsComponent {
       "name": "projects.name.2",
       "description": "projects.description.2",
       "image": "assets/images/projects/sisgapo.png",
+      "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",
       "demoLink": ""
     },
@@ -50,6 +55,7 @@ export class ProjectsComponent {
       "name": "projects.name.3",
       "description": "projects.description.3",
       "image": "assets/images/projects/lucky.png",
+      "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",
       "demoLink": "https://www.grupolucky.com/"
     },
@@ -57,6 +63,7 @@ export class ProjectsComponent {
       "name": "projects.name.10",
       "description": "projects.description.10",
       "image": "assets/images/projects/aquafiltek-small.png",
+      "tags": ["PHP", "JavaScript", "MySQL"],
       "githubLink": "",
       "demoLink": ""
     },
@@ -64,6 +71,7 @@ export class ProjectsComponent {
       "name": "projects.name.12",
       "description": "projects.description.12",
       "image": "assets/images/projects/colaborador.png",
+      "tags": ["React", "Java", "Oracle"],
       "githubLink": "",
       "demoLink": ""
     },
@@ -71,6 +79,7 @@ export class ProjectsComponent {
       "name": "projects.name.4",
       "description": "projects.description.4",
       "image": "assets/images/projects/inventario-small.png",
+      "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "https://github.com/Jmurga16/Inventario.Front",
       "demoLink": ""
     },
@@ -78,6 +87,7 @@ export class ProjectsComponent {
       "name": "projects.name.5",
       "description": "projects.description.5",
       "image": "assets/images/projects/libros-asignaturas-small.png",
+      "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "https://github.com/Jmurga16/Libros-Asignaturas",
       "demoLink": ""
     },
@@ -85,6 +95,7 @@ export class ProjectsComponent {
       "name": "projects.name.6",
       "description": "projects.description.6",
       "image": "assets/images/projects/alumnos-notas-small.png",
+      "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "https://github.com/Jmurga16/GestorAlumnos.Front",
       "demoLink": ""
     },
@@ -92,6 +103,7 @@ export class ProjectsComponent {
       "name": "projects.name.8",
       "description": "projects.description.8",
       "image": "assets/images/projects/gestor-codigos-small.png",
+      "tags": ["Angular"],
       "githubLink": "https://github.com/Jmurga16/GeneradorCodigos.Front",
       "demoLink": ""
     },
@@ -99,6 +111,7 @@ export class ProjectsComponent {
       "name": "projects.name.9",
       "description": "projects.description.9",
       "image": "assets/images/projects/parafinanciera.PNG",
+      "tags": ["Angular"],
       "githubLink": "https://github.com/Jmurga16",
       "demoLink": ""
     },
@@ -106,6 +119,7 @@ export class ProjectsComponent {
       "name": "projects.name.14",
       "description": "projects.description.14",
       "image": "assets/images/projects/restaurant-mvp.png",
+      "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",
       "demoLink": ""
     },
@@ -120,6 +134,7 @@ export class ProjectsComponent {
       "name": "projects.landings.name.1",
       "description": "projects.landings.description.1",
       "image": "assets/images/projects/siempre-legal-web.png",
+      "tags": ["Astro"],
       "githubLink": "",
       "demoLink": "https://www.siempre-legal.com/"
     },
@@ -127,6 +142,7 @@ export class ProjectsComponent {
       "name": "projects.landings.name.2",
       "description": "projects.landings.description.2",
       "image": "assets/images/projects/devkora-web.png",
+      "tags": ["Astro"],
       "githubLink": "",
       "demoLink": "https://www.devkora.com/"
     },
@@ -134,6 +150,7 @@ export class ProjectsComponent {
       "name": "projects.landings.name.3",
       "description": "projects.landings.description.3",
       "image": "assets/images/projects/masuno-small.png",
+      "tags": ["Angular"],
       "githubLink": "",
       "demoLink": ""
     },
