@@ -1,0 +1,37 @@
+<div class="modal-body">
+    <button class="modal-close-btn" (click)="activeModal.dismiss()">
+        <i class="fa fa-times"></i>
+    </button>
+    <div class="row g-0">
+        <div class="col-md-7 modal-img-col">
+            <img [src]="project.image" [alt]="project.name | translate" class="modal-project-img" />
+        </div>
+        <div class="col-md-5 modal-project-content p-4">
+            <h4>{{ project.name | translate }}</h4>
+            <p class="modal-project-desc">{{ (project.longDescription ?? '') | translate }}</p>
+            @if (project.tags?.length) {
+                <div class="tags mb-3">
+                    @for (tag of project.tags!; track tag) {
+                        <span class="tag">{{ tag }}</span>
+                    }
+                </div>
+            }
+            @if (project.githubLink || project.demoLink) {
+                <div class="buttons">
+                    @if (project.githubLink) {
+                        <a class="btn btn-secondary btn-round btn-github"
+                            [href]="project.githubLink" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                    }
+                    @if (project.demoLink) {
+                        <a class="btn btn-outline-primary btn-round btn-demo"
+                            [href]="project.demoLink" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-eye"></i> DEMO
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>

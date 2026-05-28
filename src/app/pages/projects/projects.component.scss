@@ -34,11 +34,14 @@
         overflow     : hidden;
         position     : relative;
         transition   : transform 0.3s;
-        cursor       : pointer;
-        min-height   : 395px;
+        min-height   : 280px;
 
-        &:hover {
-            transform: translateY(-5px);
+        &--clickable {
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
         }
 
         img {
@@ -60,7 +63,6 @@
 
             p {
                 align-content: center;
-                min-height   : 50px;
                 color        : #666;
             }
 
@@ -72,6 +74,12 @@
                     text-decoration: underline;
                 }
             }
+        }
+
+        .btn-details {
+            margin-top    : 8px;
+            pointer-events: none;
+            width         : 100%;
         }
     }
 
@@ -94,14 +102,17 @@
 }
 
 :host-context(.dark-mode) {
-    .projects-subtitle {
-        color            : #E0E0E0;
-        border-left-color: #66B2FF;
-    }
+    #projects {
+        .projects-subtitle {
+            color            : #E0E0E0;
+            border-left-color: #66B2FF;
+        }
 
-    .tag {
-        background-color: rgba(102, 178, 255, 0.15) !important;
-        border-color    : rgba(102, 178, 255, 0.4) !important;
-        color           : #66B2FF !important;
+        .tag {
+            background-color: rgba(102, 178, 255, 0.15) !important;
+            border-color    : rgba(102, 178, 255, 0.4) !important;
+            color           : #66B2FF !important;
+        }
+
     }
 }

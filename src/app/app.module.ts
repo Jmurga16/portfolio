@@ -13,6 +13,7 @@ import { EducationComponent } from './pages/education/education.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 import { SkillComponent } from './pages/skill/skill.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { ProjectModalComponent } from './pages/projects/project-modal/project-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslatePipe } from './pipes/translate.pipe';
 import { TranslateService } from './services/translate.service';
@@ -34,6 +35,7 @@ export function translateFactory(provider: TranslateService) {
     ExperienceComponent,
     SkillComponent,
     ProjectsComponent,
+    ProjectModalComponent,
     TranslatePipe
   ],
   imports: [

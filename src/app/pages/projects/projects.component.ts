@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { IProjectList } from '../../models/interfaces/project-list';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 @Component({
   selector: 'app-projects',
@@ -10,10 +12,18 @@ export class ProjectsComponent {
 
   showAllSystems = false;
 
+  constructor(private modalService: NgbModal) {}
+
+  openModal(project: IProjectList): void {
+    const ref = this.modalService.open(ProjectModalComponent, { size: 'lg', centered: true });
+    ref.componentInstance.project = project;
+  }
+
   systemsList: IProjectList[] = [
     {
       "name": "projects.name.16",
       "description": "projects.description.16",
+      "longDescription": "projects.systems.detail.16",
       "image": "assets/images/projects/erp-logistics.png",
       "tags": ["Angular", "Java", "MySQL"],
       "githubLink": "",
@@ -22,6 +32,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.13",
       "description": "projects.description.13",
+      "longDescription": "projects.systems.detail.13",
       "image": "assets/images/projects/gestion-expedientes.png",
       "tags": ["Angular", "Java", "MongoDB"],
       "githubLink": "",
@@ -30,6 +41,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.15",
       "description": "projects.description.15",
+      "longDescription": "projects.systems.detail.15",
       "image": "assets/images/projects/densys.png",
       "tags": ["React", "Java", "PostgreSQL"],
       "githubLink": "",
@@ -38,6 +50,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.1",
       "description": "projects.description.1",
+      "longDescription": "projects.systems.detail.1",
       "image": "assets/images/projects/crmlegal-small.png",
       "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",
@@ -46,6 +59,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.2",
       "description": "projects.description.2",
+      "longDescription": "projects.systems.detail.2",
       "image": "assets/images/projects/sisgapo.png",
       "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",
@@ -54,6 +68,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.3",
       "description": "projects.description.3",
+      "longDescription": "projects.systems.detail.3",
       "image": "assets/images/projects/lucky.png",
       "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",
@@ -62,6 +77,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.10",
       "description": "projects.description.10",
+      "longDescription": "projects.systems.detail.10",
       "image": "assets/images/projects/aquafiltek-small.png",
       "tags": ["PHP", "JavaScript", "MySQL"],
       "githubLink": "",
@@ -70,6 +86,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.12",
       "description": "projects.description.12",
+      "longDescription": "projects.systems.detail.12",
       "image": "assets/images/projects/colaborador.png",
       "tags": ["React", "Java", "Oracle"],
       "githubLink": "",
@@ -78,6 +95,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.4",
       "description": "projects.description.4",
+      "longDescription": "projects.systems.detail.4",
       "image": "assets/images/projects/inventario-small.png",
       "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "https://github.com/Jmurga16/Inventario.Front",
@@ -86,6 +104,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.5",
       "description": "projects.description.5",
+      "longDescription": "projects.systems.detail.5",
       "image": "assets/images/projects/libros-asignaturas-small.png",
       "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "https://github.com/Jmurga16/Libros-Asignaturas",
@@ -94,6 +113,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.6",
       "description": "projects.description.6",
+      "longDescription": "projects.systems.detail.6",
       "image": "assets/images/projects/alumnos-notas-small.png",
       "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "https://github.com/Jmurga16/GestorAlumnos.Front",
@@ -102,6 +122,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.8",
       "description": "projects.description.8",
+      "longDescription": "projects.systems.detail.8",
       "image": "assets/images/projects/gestor-codigos-small.png",
       "tags": ["Angular"],
       "githubLink": "https://github.com/Jmurga16/GeneradorCodigos.Front",
@@ -110,6 +131,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.9",
       "description": "projects.description.9",
+      "longDescription": "projects.systems.detail.9",
       "image": "assets/images/projects/parafinanciera.PNG",
       "tags": ["Angular"],
       "githubLink": "https://github.com/Jmurga16",
@@ -118,6 +140,7 @@ export class ProjectsComponent {
     {
       "name": "projects.name.14",
       "description": "projects.description.14",
+      "longDescription": "projects.systems.detail.14",
       "image": "assets/images/projects/restaurant-mvp.png",
       "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",

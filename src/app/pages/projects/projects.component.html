@@ -4,59 +4,65 @@
 
         <h3 class="projects-subtitle mb-4">{{'projects.section.landings'|translate}}</h3>
         <div class="row mb-5">
-            <div class="col-md-4 mb-4" *ngFor="let project of landingsList">
-                <div class="card project-card shadow-sm">
-                    <img [src]="project.image" alt="{{ project.name }}" class="img-fluid" />
-                    <div class="project-content p-3">
-                        <h5 class="card-title">{{ project.name | translate }}</h5>
-                        <p class="card-text">{{ project.description | translate }}</p>
-                        <div class="tags" *ngIf="project.tags?.length">
-                            <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
-                        </div>
-                        <div class="buttons">
-                            <a class="btn btn-primary btn-round btn-visit" [href]="project.demoLink"
-                                [ngClass]="project.demoLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-external-link-alt"></i>
-                                {{'projects.landings.visit'|translate}}
-                            </a>
+            @for (project of landingsList; track project.name) {
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card shadow-sm">
+                        <img [src]="project.image" alt="{{ project.name }}" class="img-fluid" />
+                        <div class="project-content p-3">
+                            <h5 class="card-title">{{ project.name | translate }}</h5>
+                            <p class="card-text">{{ project.description | translate }}</p>
+                            @if (project.tags?.length) {
+                                <div class="tags">
+                                    @for (tag of project.tags!; track tag) {
+                                        <span class="tag">{{ tag }}</span>
+                                    }
+                                </div>
+                            }
+                            <div class="buttons">
+                                <a class="btn btn-primary btn-round btn-visit" [href]="project.demoLink"
+                                    [ngClass]="project.demoLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-external-link-alt"></i>
+                                    {{'projects.landings.visit'|translate}}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
         </div>
 
         <h3 class="projects-subtitle mb-4">{{'projects.section.systems'|translate}}</h3>
         <div class="row">
-            <div class="col-md-4 mb-4" *ngFor="let project of visibleSystems">
-                <div class="card project-card shadow-sm">
-                    <img [src]="project.image" alt="{{ project.name }}" class="img-fluid" />
-                    <div class="project-content p-3">
-                        <h5 class="card-title">{{ project.name | translate }}</h5>
-                        <p class="card-text">{{ project.description | translate }}</p>
-                        <div class="tags" *ngIf="project.tags?.length">
-                            <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
-                        </div>
-                        <div class="buttons">
-                            <a class="btn btn-secondary btn-round btn-github" [href]="project.githubLink"
-                                [ngClass]="project.githubLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i>
-                                GITHUB
-                            </a>
-                            <a class="btn btn-outline-primary btn-round btn-demo" [href]="project.demoLink"
-                                [ngClass]="project.demoLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">
+            @for (project of visibleSystems; track project.name) {
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card project-card--clickable shadow-sm" (click)="openModal(project)">
+                        <img [src]="project.image" alt="{{ project.name }}" class="img-fluid" />
+                        <div class="project-content p-3">
+                            <h5 class="card-title">{{ project.name | translate }}</h5>
+                            @if (project.tags?.length) {
+                                <div class="tags">
+                                    @for (tag of project.tags!; track tag) {
+                                        <span class="tag">{{ tag }}</span>
+                                    }
+                                </div>
+                            }
+                            <span class="btn btn-primary btn-round btn-visit btn-details">
                                 <i class="fa fa-eye"></i>
-                                DEMO
-                            </a>
+                                {{'projects.systems.click_hint'|translate}}
+                            </span>
                         </div>
                     </div>
                 </div>
+            }
+        </div>
+
+        @if (systemsList.length > 6) {
+            <div class="text-center mt-3">
+                <button class="btn btn-outline-primary btn-round px-4" (click)="showAllSystems = !showAllSystems">
+                    <i class="fa" [ngClass]="showAllSystems ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                    {{ (showAllSystems ? 'projects.systems.show_less' : 'projects.systems.show_more') | translate }}
+                </button>
             </div>
-        </div>
-        <div class="text-center mt-3" *ngIf="systemsList.length > 6">
-            <button class="btn btn-outline-primary btn-round px-4" (click)="showAllSystems = !showAllSystems">
-                <i class="fa" [ngClass]="showAllSystems ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
-                {{ (showAllSystems ? 'projects.systems.show_less' : 'projects.systems.show_more') | translate }}
-            </button>
-        </div>
+        }
     </div>
 </section>
