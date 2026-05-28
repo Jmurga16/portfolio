@@ -24,7 +24,8 @@ export class TranslateService {
       if (!language) {
         language = this.isBrowser ? navigator.language : 'es';
       }
-      this.httpClient.get(path + language + ".json").subscribe({
+      const headers = { 'Cache-Control': 'no-cache' };
+      this.httpClient.get(path + language + ".json", { headers }).subscribe({
         next: (data) => {
           this.data = data
           resolve(true);
@@ -32,7 +33,7 @@ export class TranslateService {
         error: (error) => {
           //console.error(error)
           console.clear();
-          this.httpClient.get(path + "es.json").subscribe({
+          this.httpClient.get(path + "es.json", { headers }).subscribe({
             next: (data) => {
               this.data = data
               resolve(true);
