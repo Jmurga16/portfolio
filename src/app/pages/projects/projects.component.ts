@@ -51,7 +51,7 @@ export class ProjectsComponent {
       "name": "projects.name.1",
       "description": "projects.description.1",
       "longDescription": "projects.systems.detail.1",
-      "image": "assets/images/projects/crmlegal-small.png",
+      "image": "assets/images/projects/crmlegal.png",
       "tags": ["Angular", ".NET", "SQL Server"],
       "githubLink": "",
       "demoLink": "https://crm-legal.azurewebsites.net/"
@@ -90,42 +90,6 @@ export class ProjectsComponent {
       "image": "assets/images/projects/colaborador.png",
       "tags": ["React", "Java", "Oracle"],
       "githubLink": "",
-      "demoLink": ""
-    },
-    {
-      "name": "projects.name.4",
-      "description": "projects.description.4",
-      "longDescription": "projects.systems.detail.4",
-      "image": "assets/images/projects/inventario-small.png",
-      "tags": ["Angular", ".NET", "SQL Server"],
-      "githubLink": "https://github.com/Jmurga16/Inventario.Front",
-      "demoLink": ""
-    },
-    {
-      "name": "projects.name.5",
-      "description": "projects.description.5",
-      "longDescription": "projects.systems.detail.5",
-      "image": "assets/images/projects/libros-asignaturas-small.png",
-      "tags": ["Angular", ".NET", "SQL Server"],
-      "githubLink": "https://github.com/Jmurga16/Libros-Asignaturas",
-      "demoLink": ""
-    },
-    {
-      "name": "projects.name.6",
-      "description": "projects.description.6",
-      "longDescription": "projects.systems.detail.6",
-      "image": "assets/images/projects/alumnos-notas-small.png",
-      "tags": ["Angular", ".NET", "SQL Server"],
-      "githubLink": "https://github.com/Jmurga16/GestorAlumnos.Front",
-      "demoLink": ""
-    },
-    {
-      "name": "projects.name.8",
-      "description": "projects.description.8",
-      "longDescription": "projects.systems.detail.8",
-      "image": "assets/images/projects/gestor-codigos-small.png",
-      "tags": ["Angular"],
-      "githubLink": "https://github.com/Jmurga16/GeneradorCodigos.Front",
       "demoLink": ""
     },
     {
