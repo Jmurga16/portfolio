@@ -1,8 +1,30 @@
 <section id="projects" class="container-section">
     <div class="container">
         <h2 class="text-center mb-5">{{'projects.title'|translate}}</h2>
+
+        <h3 class="projects-subtitle mb-4">{{'projects.section.landings'|translate}}</h3>
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4" *ngFor="let project of landingsList">
+                <div class="card project-card shadow-sm">
+                    <img [src]="project.image" alt="{{ project.name }}" class="img-fluid" />
+                    <div class="project-content p-3">
+                        <h5 class="card-title">{{ project.name | translate }}</h5>
+                        <p class="card-text">{{ project.description | translate }}</p>
+                        <div class="buttons">
+                            <a class="btn btn-primary btn-round btn-visit" [href]="project.demoLink"
+                                [ngClass]="project.demoLink==''? 'disabled':''" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-external-link-alt"></i>
+                                {{'projects.landings.visit'|translate}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="projects-subtitle mb-4">{{'projects.section.systems'|translate}}</h3>
         <div class="row">
-            <div class="col-md-4 mb-4" *ngFor="let project of projectsList">
+            <div class="col-md-4 mb-4" *ngFor="let project of visibleSystems">
                 <div class="card project-card shadow-sm">
                     <img [src]="project.image" alt="{{ project.name }}" class="img-fluid" />
                     <div class="project-content p-3">
@@ -23,6 +45,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="text-center mt-3" *ngIf="systemsList.length > 6">
+            <button class="btn btn-outline-primary btn-round px-4" (click)="showAllSystems = !showAllSystems">
+                <i class="fa" [ngClass]="showAllSystems ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                {{ (showAllSystems ? 'projects.systems.show_less' : 'projects.systems.show_more') | translate }}
+            </button>
         </div>
     </div>
 </section>

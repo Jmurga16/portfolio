@@ -7,7 +7,10 @@ import { IProjectList } from '../../models/interfaces/project-list';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  projectsList: IProjectList[] = [
+
+  showAllSystems = false;
+
+  systemsList: IProjectList[] = [
     {
       "name": "projects.name.16",
       "description": "projects.description.16",
@@ -51,6 +54,20 @@ export class ProjectsComponent {
       "demoLink": "https://www.grupolucky.com/"
     },
     {
+      "name": "projects.name.10",
+      "description": "projects.description.10",
+      "image": "assets/images/projects/aquafiltek-small.png",
+      "githubLink": "",
+      "demoLink": ""
+    },
+    {
+      "name": "projects.name.12",
+      "description": "projects.description.12",
+      "image": "assets/images/projects/colaborador.png",
+      "githubLink": "",
+      "demoLink": ""
+    },
+    {
       "name": "projects.name.4",
       "description": "projects.description.4",
       "image": "assets/images/projects/inventario-small.png",
@@ -72,13 +89,6 @@ export class ProjectsComponent {
       "demoLink": ""
     },
     {
-      "name": "projects.name.7",
-      "description": "projects.description.7",
-      "image": "assets/images/projects/masuno-small.png",
-      "githubLink": "",
-      "demoLink": ""
-    },
-    {
       "name": "projects.name.8",
       "description": "projects.description.8",
       "image": "assets/images/projects/gestor-codigos-small.png",
@@ -93,34 +103,39 @@ export class ProjectsComponent {
       "demoLink": ""
     },
     {
-      "name": "projects.name.10",
-      "description": "projects.description.10",
-      "image": "assets/images/projects/aquafiltek-small.png",
-      "githubLink": "",
-      "demoLink": ""
-    },
-    /* {
-      "name": "projects.name.11",
-      "description": "projects.description.11",
-      "image": "assets/images/projects/referencial.png",
-      "githubLink": "https://github.com/Jmurga16",
-      "demoLink": ""
-    }, */
-    {
-      "name": "projects.name.12",
-      "description": "projects.description.12",
-      "image": "assets/images/projects/colaborador.png",
-      "githubLink": "",
-      "demoLink": ""
-    },
-    {
       "name": "projects.name.14",
       "description": "projects.description.14",
       "image": "assets/images/projects/restaurant-mvp.png",
       "githubLink": "",
       "demoLink": ""
     },
+  ];
 
-  ]
+  get visibleSystems(): IProjectList[] {
+    return this.showAllSystems ? this.systemsList : this.systemsList.slice(0, 6);
+  }
 
+  landingsList: IProjectList[] = [
+    {
+      "name": "projects.landings.name.1",
+      "description": "projects.landings.description.1",
+      "image": "assets/images/projects/siempre-legal-web.png",
+      "githubLink": "",
+      "demoLink": "https://www.siempre-legal.com/"
+    },
+    {
+      "name": "projects.landings.name.2",
+      "description": "projects.landings.description.2",
+      "image": "assets/images/projects/devkora-web.png",
+      "githubLink": "",
+      "demoLink": "https://www.devkora.com/"
+    },
+    {
+      "name": "projects.landings.name.3",
+      "description": "projects.landings.description.3",
+      "image": "assets/images/projects/masuno-small.png",
+      "githubLink": "",
+      "demoLink": ""
+    },
+  ];
 }

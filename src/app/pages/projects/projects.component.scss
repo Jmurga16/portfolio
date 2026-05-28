@@ -1,5 +1,16 @@
 #projects {
 
+    .projects-subtitle {
+        font-size    : 1.4rem;
+        font-weight  : 600;
+        border-left  : 4px solid #007bff;
+        padding-left : 12px;
+    }
+
+    .btn-visit {
+        width: 100%;
+    }
+
     .project-card {
         border-radius: 8px !important;
         overflow     : hidden;
